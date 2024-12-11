@@ -9,7 +9,7 @@ Analyze the provided routine to identify and list bad points. The routine is sys
 
 ```c
 void handleStuff( CORP_DATA & inputRec, int crntQtr, EMP_DATA empRec, 
-                  double & ytdRevenue, int acrecX, int acrecY, 
+                  double & ytdRevenue, int screenX, int screenY, 
                   COLOR_TYPE & newColor, COLOR_TYPE & prevColor, 
                   StatusType & status, int expenseType ) {
 
