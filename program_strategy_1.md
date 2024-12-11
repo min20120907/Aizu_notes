@@ -13,8 +13,7 @@ void handleStuff( CORP_DATA & inputRec, int crntQtr, EMP_DATA empRec,
                   COLOR_TYPE & newColor, COLOR_TYPE & prevColor, 
                   StatusType & status, int expenseType ) {
 
-    int i, j;
-    inputRec.revenue[i] = 0;
+    int i;
     for (i = 0; i < 100;i++){
       inputRec.revenue[i] = 0;
       inputRec.expense[i] = corpExpense[crntQtr][i];
