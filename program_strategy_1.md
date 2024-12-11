@@ -8,16 +8,19 @@ Analyze the provided routine to identify and list bad points. The routine is sys
 ### Original Code
 
 ```c
-void handleStuff( CORP_DATA & inputRec, int cntCtr, EMP_DATA empRec, 
+void handleStuff( CORP_DATA & inputRec, int crntQtr, EMP_DATA empRec, 
                   double & ytdRevenue, int acrecX, int acrecY, 
                   COLOR_TYPE & newColor, COLOR_TYPE & prevColor, 
                   StatusType & status, int expenseType ) {
 
     int i, j;
-    inputRec.revenue = ( inputRec.revenue / (double) cntCtr ) + 1;
-
+    inputRec.revenue[i] = 0;
+    for (i = 0; i < 100;i++){
+      inputRec.revenue[i] = 0;
+      inputRec.expense[i] = corpExpense[crntQtr][i];
+    }
     updateCorpDatabase( empRec );
-    ytdRevenue = ytdRevenue * 4.0 / (double) cntCtr;
+    ytdRevenue = ytdRevenue * 4.0 / (double) crntQtr;
     newColor = prevColor;
     status = SUCCESS;
 
