@@ -27,9 +27,9 @@ void handleStuff( CORP_DATA & inputRec, int crntQtr, EMP_DATA empRec,
         for ( i = 0; i < 12; ++i ) {
             profit[i] = revenue[i] - expense.type1[i];
         }
-    } else if ( expenseType == 2 || expenseType == 3 || expenseType == 5 ) {
+    } else if ( expenseType == 2 ) {
         profit[i] = revenue[i] - expense.type2[i];
-    } else if ( expenseType == 4 ) {
+    } else if ( expenseType == 3 ) {
         profit[i] = revenue[i] - expense.type3[i];
     }
 }
